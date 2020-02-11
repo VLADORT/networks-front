@@ -5,17 +5,20 @@ class Node extends React.Component {
     constructor(props) {
         super(props);
     }
-
+//TODO: add rendering params
     render() {
         return (
-            <div>
-                <div>id: {this.props.node.id} </div>
-                <span> type: {this.props.node.type}</span>
-                <span>name: {this.props.node.name}</span>
-                <span>description: {this.props.node.description}</span>
+            <ul>
+                <li>id: {this.props.node.id} </li>
+                <li> type: {this.props.node.type}</li>
+                <li>name: {this.props.node.name}</li>
+                <li>description: {this.props.node.description}</li>
+                <br/>
                 {/*<span>params: {this.props.node.params}</span>*/}
-                <div>children: {this.props.node.children.map(n => <Node node={n}/>)}</div>
-            </div>
+                {this.props.node.children.length > 0 ?
+                    <ul>children: {this.props.node.children.map(n => <Node node={n}/>)}</ul> : ""
+                }
+            </ul>
         )
 
 

@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import Node from "./components/Node";
 
+//TODO: useEffect() spams with requests
+
 // const App = () => {
 //     const [networks, setNetworks] = React.useState([]);
 //     useEffect(() => {
@@ -23,9 +25,7 @@ import Node from "./components/Node";
 //         <div className="App">
 //             <ul>
 //                 {networks.map(n =>
-//                     <li id={n.id}>
-//                         {n.id}
-//                     </li>
+//                     <Node node={n}/>
 //                 )}
 //             </ul>
 //         </div>

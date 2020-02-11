@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6c1a16f-94ca-412f-b151-ab305b5c62cf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Network.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Node.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Node.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Node.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +83,7 @@
       <workItem from="1581148234189" duration="2509000" />
       <workItem from="1581348580474" duration="2830000" />
       <workItem from="1581354818464" duration="2082000" />
-      <workItem from="1581434360504" duration="7311000" />
+      <workItem from="1581434360504" duration="8450000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1581149140198</created>
@@ -94,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581149140198</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added rendering networks with children">
+      <created>1581441914061</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581441914062</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="added rendering networks with children" />
+    <option name="LAST_COMMIT_MESSAGE" value="added rendering networks with children" />
   </component>
 </project>
