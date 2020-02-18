@@ -5,6 +5,7 @@ class Node extends React.Component {
     constructor(props) {
         super(props);
     }
+
 //TODO: add rendering params
     render() {
         return (
