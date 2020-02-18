@@ -2,7 +2,6 @@ import React from "react";
 import Node from "./Node";
 
 class NetworkRow extends React.Component {
-    //todo DOES NOT WORK HIDING OF NODES
     constructor(props) {
         super(props);
         this.state = {
@@ -13,7 +12,9 @@ class NetworkRow extends React.Component {
     }
 
     handleViewNodes() {
-        this.setState({isNodesVisible: !this.isNodesVisible})
+        console.log(this.state.isNodesVisible)
+        this.setState({isNodesVisible: !this.state.isNodesVisible})
+        console.log(this.state.isNodesVisible)
     }
 
     render() {
@@ -24,7 +25,7 @@ class NetworkRow extends React.Component {
                 <td>{this.props.network.name}</td>
                 <td>{this.props.network.description}</td>
                 <td>
-                    <button className="button"
+                    <button className="button btn-success"
                             onClick={this.handleViewNodes}>
                         {this.state.isNodesVisible ? "Hide nodes" :
                             "View nodes"}
@@ -32,8 +33,8 @@ class NetworkRow extends React.Component {
                     {this.state.isNodesVisible && <Node node={this.props.network}/>}
                 </td>
                 <td>
-                    <button className="button">Edit</button>
-                    <button className="button">Delete</button>
+                    <button className="button btn-warning">Edit</button>
+                    <button className="button btn-danger">Delete</button>
                 </td>
             </tr>
         )

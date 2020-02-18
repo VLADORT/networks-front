@@ -4,8 +4,6 @@ import './App.css';
 import Node from "./components/Node";
 import NetworkTable from "./components/NetworkTable"
 
-//TODO: useEffect() spams with requests
-
 const App = () => {
     const [networks, setNetworks] = React.useState([]);
 

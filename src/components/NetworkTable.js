@@ -9,23 +9,24 @@ class NetworkTable extends React.Component {
 
     render() {
         return (
-            <table className="table">
+            <table className="table table-dark">
                 <thead>
-                <th>Id</th>
-                <th>Type</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Nodes</th>
+                <tr>
+                    <th>Id</th>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Nodes</th>
+                </tr>
                 </thead>
                 <tbody>
                 {this.props.networks.length > 0 ? (
                     this.props.networks.map(network => (
-                       <NetworkRow network={network}/>
+                        <NetworkRow network={network}/>
                     ))
                 ) : (
                     <tr>
                         <td colSpan={4}>No networks</td>
-                        )
                     </tr>
                 )}
                 </tbody>
