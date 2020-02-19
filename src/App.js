@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Node from "./components/Node";
 import NetworkTable from "./components/NetworkTable"
 
+
 const App = () => {
+
     const [networks, setNetworks] = React.useState([]);
 
     useEffect(() => {
@@ -21,6 +21,20 @@ const App = () => {
             .then(json => setNetworks(json))
     }, []);
 
+    const deleteNetwork = id => {
+        setNetworks(networks.filter(user => user.id !== id));
+        fetch('http://localhost:9091/api/network/' + id,
+            {
+                mode: 'cors',
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                }
+            })
+            .then((response) => response.json())
+    };
+
     return (
         <div className="container">
             <h1>Network Management application</h1>
@@ -30,46 +44,12 @@ const App = () => {
                 {/*</div>*/}
                 <div className="flex-large">
                     <h2>View networks</h2>
-                    <NetworkTable networks={networks}/>
+                    <NetworkTable deleteNetwork={deleteNetwork} networks={networks}/>
                 </div>
             </div>
-            {/*<ul>*/}
-            {/*    {networks.map(n =>*/}
-            {/*        <Node node={n}/>*/}
-            {/*    )}*/}
-            {/*</ul>*/}
         </div>
     );
-};
 
-// class App extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             isSignedUp: false,
-//             networks: []
-//         }
-//
-//     };
-//
-//     componentDidMount() {
-//          fetch('http://localhost:9091/api/network/',
-//             {
-//                 mode: 'cors',
-//                 method: 'GET',
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                     'Accept': 'application/json'
-//                 }
-//             })
-//             .then((response) => response.json())
-//             .then(json => this.setState({networks: json}));
-//     }
-//
-//     render() {
-//
-//     }
-//
-// }
+};
 
 export default App;

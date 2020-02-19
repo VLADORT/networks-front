@@ -1,10 +1,6 @@
 import React from "react";
-import {render} from "react-dom";
 
 class Node extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
 //TODO: add rendering params
     render() {
@@ -24,18 +20,6 @@ class Node extends React.Component {
 
 
     }
-
-}
-
-
-// const Node = (props) => {
-//     const {node} = props;
-//     return (
-//         <div>{node.id}</div>
-//     )
-// };
-
-class NodeEntity {
 
 }
 

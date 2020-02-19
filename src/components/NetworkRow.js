@@ -2,6 +2,7 @@ import React from "react";
 import Node from "./Node";
 
 class NetworkRow extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
@@ -12,14 +13,12 @@ class NetworkRow extends React.Component {
     }
 
     handleViewNodes() {
-        console.log(this.state.isNodesVisible)
         this.setState({isNodesVisible: !this.state.isNodesVisible})
-        console.log(this.state.isNodesVisible)
     }
 
     render() {
         return (
-            <tr key={this.props.network.id}>
+            <tr key={this.props.id}>
                 <td>{this.props.network.id}</td>
                 <td>{this.props.network.type}</td>
                 <td>{this.props.network.name}</td>
@@ -34,7 +33,7 @@ class NetworkRow extends React.Component {
                 </td>
                 <td>
                     <button className="button btn-warning">Edit</button>
-                    <button className="button btn-danger">Delete</button>
+                    <button className="button btn-danger" onClick={()=>{this.props.deleteNetwork(this.state.network.id)}}>Delete</button>
                 </td>
             </tr>
         )

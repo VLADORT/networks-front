@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react';
-import logo from './logo.svg';
+import React  from 'react';
 import Node from "./Node";
 
 class Network extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
