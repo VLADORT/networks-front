@@ -20,7 +20,7 @@ class NetworkRow extends React.Component {
         return (
             <tr key={this.props.id}>
                 <td>{this.props.network.id}</td>
-                <td>{this.props.network.type}</td>
+                {/*<td>{this.props.network.type}</td>*/}
                 <td>{this.props.network.name}</td>
                 <td>{this.props.network.description}</td>
                 <td>

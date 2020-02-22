@@ -17,8 +17,6 @@ class Node extends React.Component {
                 }
             </ul>
         )
-
-
     }
 
 }

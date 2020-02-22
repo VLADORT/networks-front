@@ -1,11 +1,20 @@
 import React, {useEffect} from 'react';
 import './App.css';
 import NetworkTable from "./components/NetworkTable"
+import AddNetworkForm from "./components/AddNetworkForm"
 
+const CreatingExistingNetworkWarning = () => {
+    return (
+        <div className="alert alert-danger">
+            Network with this id already exists
+        </div>
+    )
+};
 
 const App = () => {
 
     const [networks, setNetworks] = React.useState([]);
+    const [creatingExistingNetworkWarning, setCreatingExistingNetworkWarning] = React.useState(false);
 
     useEffect(() => {
         fetch('http://localhost:9091/api/network/',
@@ -20,6 +29,43 @@ const App = () => {
             .then((response) => response.json())
             .then(json => setNetworks(json))
     }, []);
+
+    const isUnique = (newNetwork) => {
+        for (let network of networks) {
+            if (network.id === newNetwork.id)
+                return false;
+        }
+        return true;
+    };
+
+    const addNetwork = network => {
+        if (isUnique(network)) {
+            setCreatingExistingNetworkWarning(false);
+            fetch('http://localhost:9091/api/network/',
+                {
+                    mode: 'cors',
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(network)
+                })
+                .then((response) => response.json())
+                .then(json => {
+                    // console.log(json);
+                    // console.log(networks);
+                    // if (!networks.includes(json)) {
+                    // console.log(networks);
+                    setNetworks([...networks, json])
+                    // }
+                });
+        } else {
+            setCreatingExistingNetworkWarning(true)
+        }
+        // setNetworks([...networks, network])
+    };
+
 
     const deleteNetwork = id => {
         setNetworks(networks.filter(user => user.id !== id));
@@ -39,9 +85,11 @@ const App = () => {
         <div className="container">
             <h1>Network Management application</h1>
             <div className="d-flex justify-content-around">
-                {/*<div className="flex-large">*/}
-                {/*    <h2>Add network</h2>*/}
-                {/*</div>*/}
+                <div className="flex-large">
+                    <h2>Add network</h2>
+                    <AddNetworkForm addNetwork={addNetwork}/>
+                    {creatingExistingNetworkWarning && <CreatingExistingNetworkWarning/>}
+                </div>
                 <div className="flex-large">
                     <h2>View networks</h2>
                     <NetworkTable deleteNetwork={deleteNetwork} networks={networks}/>

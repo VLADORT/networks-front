@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6c1a16f-94ca-412f-b151-ab305b5c62cf" name="Default Changelist" comment="repaired bug with hiding nodes">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b6c1a16f-94ca-412f-b151-ab305b5c62cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/AddNetworkForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Network.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Network.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/NetworkRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NetworkRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NetworkTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NetworkTable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Node.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Node.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -109,7 +109,9 @@
       <workItem from="1581540493631" duration="2047000" />
       <workItem from="1581581454001" duration="992000" />
       <workItem from="1582047467405" duration="15828000" />
-      <workItem from="1582101722307" duration="5741000" />
+      <workItem from="1582101722307" duration="10330000" />
+      <workItem from="1582223493826" duration="678000" />
+      <workItem from="1582375647654" duration="10830000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1581149140198</created>
@@ -146,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582061024134</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="handled bug while viewing nodes and deleting networks">
+      <created>1582107818665</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582107818665</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +180,7 @@
     <MESSAGE value="added rendering networks in list and some TODOs" />
     <MESSAGE value="added simple ui, rendering nodes with button" />
     <MESSAGE value="repaired bug with hiding nodes" />
-    <option name="LAST_COMMIT_MESSAGE" value="repaired bug with hiding nodes" />
+    <MESSAGE value="handled bug while viewing nodes and deleting networks" />
+    <option name="LAST_COMMIT_MESSAGE" value="handled bug while viewing nodes and deleting networks" />
   </component>
 </project>
